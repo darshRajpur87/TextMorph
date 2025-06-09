@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate Prompts, Listen & Learn | Multilingual Prompt Assistant</title>
+  <meta name="description" content="Paste prompts, translate them to any language, listen to audio, and learn word meanings instantly. Supports English, French, Spanish, and more.">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>TextMorph </h1>
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+    <nav id="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-section">
+
+      <!-- Language Dropdown Menu Bar -->
+      <div class="Menu-bar">
+        <h3>Select language you want to convert the text:</h3>
+        <label for="language-selector" class="visually-hidden">Choose Language</label>
+        <select id="language-selector">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="zh">Chinese</option>
+          <option value="ar">Arabic</option>
+          <option value="hi">Hindi</option>
+          <option value="ru">Russian</option>
+        </select>
+      </div>
+
+      <!-- Editable Text Area -->
+   
+      <div class="textedit-div">
+        <div class="textdiv-header">
+          <button class="icon" title="Copy to clipboard" onclick="copyText()">Copy 📋</button>
+        </div>
+        <div id="textToCopy" class="text-div" contenteditable="true">
+          Type here ....
+        </div>
+      
+      </div>
+
+      <!-- Output Translation Area -->
+      <div class="textoutput-div" >
+        <div class="textdiv-header">
+          <button class="icon" title="Copy to clipboard" onclick="copyText()">Copy 📋</button>
+        </div>
+        <div id="textToCopy" class="textO-div"contenteditable="true" ></div>
+        <!-- Translated output goes here -->
+      </div>
+    </div>
+   
+    <div class="btn-convert">
+        <button id="btn-convert">Convert</button>
+    </div>
+  </main>
+</body>
+<script src="static/js/script.js">
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</html>
