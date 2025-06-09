@@ -1,2 +1,27 @@
-# TextMorph
-Textinator the Translator is a sleek, browser-based text editor and translator with built-in clipboard functionality. Designed for simplicity and fun, it allows users to input and edit text directly in the browser, then copy or process that content with a single click.
+# Textinator the Translator
+
+**Textinator the Translator** is a simple, browser-based text editor and translator with built-in clipboard copy functionality. It lets users quickly type, edit, and copy text, designed with a clean and user-friendly interface.
+
+---
+
+## 🚀 Live Demo
+
+Try it out here: [**Live Demo Link**](https://6846945817cd2bb843f9b661--deft-speculoos-d40641.netlify.app/)  
+
+---
+
+## 🎯 Features
+
+- 📝 Editable text area with `contenteditable`
+- 📋 One-click **Copy to Clipboard** button
+- 🔐 Uses modern and secure clipboard API
+- ⚡ Lightweight and easy to use
+- 🎨 Clean and minimal UI design
+
+---
+
+## 🛠️ Installation & Usage
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/textinator.git
