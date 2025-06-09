@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-Try it out here: [**Live Demo Link**](https://6846945817cd2bb843f9b661--deft-speculoos-d40641.netlify.app/)  
+Try it out here: [**Live Demo Link**](https://68469be2774a717da3b300a1--super-truffle-e21f22.netlify.app/)  
 
 ---
 
