@@ -1,0 +1,256 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #fefae0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f4a261;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #264653;
+}
+
+/* ===== Hamburger Icon ===== */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    height: 100vh;
+}
+
+/* ===== Language Dropdown ===== */
+.Menu-bar {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #e9c46a;
+    border-radius: 10px;
+}
+
+.Menu-bar h3 {
+    font-size: 1rem;
+    color: #264653;
+}
+
+.Menu-bar select {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* ===== Editor & Output Areas ===== */
+.textedit-div,
+.textoutput-div {
+    border: 2px solid #e76f51;
+    padding: 1rem;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.textedit-div {
+    grid-column: 1;
+    grid-row: 2 / span 6;
+}
+
+.textoutput-div {
+    grid-column: 2;
+    grid-row: 2 / span 6;
+}
+
+.textdiv-header {
+    background-color: #fefae0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px dashed #aaa;
+}
+
+.text-div,
+.textO-div {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    min-height: 200px;
+    padding: 1rem;
+}
+
+.text-div[contenteditable="true"]::before {
+    color: #aaa;
+}
+
+.icon {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #264653;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #e76f51;
+}
+
+/* ===== Convert Button ===== */
+.btn-convert {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.btn-convert button {
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(42, 157, 143, 0.2);
+}
+
+.btn-convert button:hover {
+    background-color: #21867a;
+    transform: scale(1.05);
+}
+
+.btn-convert button:active {
+    background-color: #17665d;
+    transform: scale(0.98);
+}
+
+/* ===== Responsive Styling ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .textedit-div,
+    .textoutput-div {
+        grid-column: 1 / -1;
+        margin-bottom: 1.5rem;
+    }
+
+    .Menu-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .Menu-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-convert button {
+        width: 100%;
+    }
+
+    .textedit-div,
+    .textoutput-div {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .textdiv-header {
+        font-size: 0.95rem;
+        justify-content: space-between;
+    }
+}
