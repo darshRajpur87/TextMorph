@@ -184,26 +184,37 @@ nav a:hover {
 /* Tablets */
 @media (max-width: 1024px) {
     body {
-        font-size: 15px;
+      font-size: 15px;
     }
-
+  
     .hero-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto; /* input, output, button rows */
+      gap: 1rem;
+      height: auto;
     }
-
+  
     .textedit-div,
     .textoutput-div {
-        grid-column: 1 / -1;
-        margin-bottom: 1.5rem;
+      grid-column: 1 / -1;
+      grid-row: auto;
+      display: block;
+      margin-bottom: 1.5rem;
     }
-
+  
+    .btn-convert {
+      grid-column: 1 / -1;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+  
     .Menu-bar {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-}
+  }
+  
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -247,7 +258,11 @@ nav a:hover {
     .textoutput-div {
         padding: 1rem;
         border-radius: 20px;
-    }
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
 
     .textdiv-header {
         font-size: 0.95rem;
